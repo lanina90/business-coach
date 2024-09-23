@@ -1,4 +1,4 @@
-import React, {useEffect, useLayoutEffect, useRef, useState} from 'react';
+import React, { useRef, useState} from 'react';
 import {testimonials} from "../../../constants/constants.ts";
 import styles from "./reviews.module.css"
 import ReviewCard from "./components/ReviewCard.tsx";

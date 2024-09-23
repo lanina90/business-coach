@@ -18,7 +18,7 @@ const PressCarousel = () => {
   return (
     <div ref={sliderRef} className={styles["press-carousel"]}>
       <div ref={dragTarget} draggable="true" className={styles["press"]}>
-        {pressData.map(({id, title, url}, index) => (
+        {pressData.map(({id, title, url}) => (
           <img key={id} src={url} alt={title} title={title}/>
         ))}
       </div>

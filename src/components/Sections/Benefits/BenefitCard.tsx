@@ -12,7 +12,7 @@ const Icons = {
 };
 
 
-const BenefitCard = ({id, title, desc, icon}) => {
+const BenefitCard = ({title, desc, icon}) => {
   const IconComponent = Icons[icon];
 
   return (
