@@ -62,20 +62,23 @@ export const testimonials: ITestimonial[] = [
 export const steps: IStep[] = [
   {
     id: 1,
-    img: "",
-    title: "",
-    desc: ""
+    img: "src/assets/steps/step-1.jpg",
+    icon: "src/assets/steps/icon-1.png",
+    title: "Choose a Culture",
+    desc: "When your people share a vision of their future culture, it gives them purpose and energy to work through this change."
   },
   {
     id: 2,
-    img: "",
-    title: "",
-    desc: ""
+    img: "src/assets/steps/step-2.jpg",
+    icon: "src/assets/steps/icon-2.png",
+    title: "Act with Courage",
+    desc: "Create shared values, vocabulary, and actions so your people are empowered to act with courage."
   },
   {
     id: 3,
-    img: "",
-    title: "",
-    desc: ""
+    img: "src/assets/steps/step-3.jpg",
+    icon: "src/assets/steps/icon-3.png",
+    title: "Retain to Retrain",
+    desc: "Identify and empower select employees as resident ambassadors to ensure retention and impact beyond our engagement."
   }
 ]

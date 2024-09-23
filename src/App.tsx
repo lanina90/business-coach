@@ -21,8 +21,8 @@ const App = () => {
        <CTA/>
        <About/>
        <WorkWithMe/>
-       <Benefits/>
        <Steps/>
+       <Benefits/>
        <LetsConnect/>
      </main>
       <Footer/>
