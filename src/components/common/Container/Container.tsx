@@ -1,13 +1,14 @@
 import styles from "./container.module.css"
 import classNames from 'classnames';
+import {forwardRef} from "react";
 
 
-const Container = ({children, className}) => {
+const Container = forwardRef(({ children, className, ...rest }, ref) => {
   return (
-    <div className={classNames(styles.container, className && className)}>
+    <div ref={ref} {...rest} className={classNames(styles.container, className)}>
       {children}
     </div>
   );
-};
+});
 
 export default Container;
