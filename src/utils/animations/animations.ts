@@ -21,6 +21,7 @@ export const elementAppearingEffect = (target) => {
       trigger: target,
       start: 'top 80%',
       scrub: false,
+      toggleActions: "restart none none none"
     }
   });
 
