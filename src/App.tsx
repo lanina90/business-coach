@@ -5,7 +5,6 @@ import {
   Header,
   Hero,
   LetsConnect,
-  Press,
   Steps,
   Testimonials,
   WorkWithMe
@@ -18,7 +17,6 @@ const App = () => {
       <Header/>
      <main>
        <Hero/>
-       <Press/>
        <Testimonials/>
        <CTA/>
        <About/>

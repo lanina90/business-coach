@@ -1,0 +1,22 @@
+
+
+.press-carousel{
+  position: relative;
+  opacity: 1;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+
+}
+.press {
+  display: flex;
+  gap:50px;
+  align-items: center;
+  width: max-content;
+}
+
+@media screen and ( min-width: 1024px) {
+  .press {
+    gap:70px;
+  }
+}
