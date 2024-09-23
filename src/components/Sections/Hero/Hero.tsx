@@ -3,6 +3,7 @@ import Container from "../../common/Container/Container.tsx";
 import classNames from "classnames";
 import Button from "../../UI/Button/Button.tsx";
 import {useParallaxAnimation} from "../../../hooks/useParalaxAnimation.ts";
+import Gradient from "../../common/Gradient/Gradient.tsx";
 
 const Hero = () => {
 
@@ -14,12 +15,7 @@ const Hero = () => {
         <h1 className={styles["hero-content-title"]}>John Doe - Lorem ipsum dolor sit amet </h1>
         <h2 className={styles["hero-content-subtitle"]}>Build & Sustain Workplace Cultures of Joyful Peak
           Performance</h2>
-        <img
-          src="/src/assets/large-gradient-shadow.png"
-          alt="gradient"
-          sizes="(max-width: 1282px) 100vw, 1282px"
-          className={styles["hero-gradient"]}
-        />
+        <Gradient  className={styles["hero-gradient"]}/>
         <div className={styles["hero-buttons"]}>
           <Button buttonStyle="gradient">Watch My Video</Button>
           <Button href={'#contact'} buttonStyle="primary">Partner with me</Button>

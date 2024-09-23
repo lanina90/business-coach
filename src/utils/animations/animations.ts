@@ -1,7 +1,7 @@
-import {Draggable} from "gsap/all";
+import {Draggable, ScrollTrigger} from "gsap/all";
 import gsap from "gsap";
 
-gsap.registerPlugin(Draggable);
+gsap.registerPlugin(Draggable,ScrollTrigger);
 
 export const dragAndDropAnimation = (target, bounds, ...rest) => {
   Draggable.create(target, {
