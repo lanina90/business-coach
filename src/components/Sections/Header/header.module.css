@@ -4,14 +4,33 @@
   width: 100%;
   position: fixed;
   inset: 0;
-  height: 70px;
+  height: max-content;
   background: transparent;
+  z-index: 999;
 }
 
-.header-logo{
-
-}
 
 .header-social{
+  color: #FF8278;
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.header-social-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #FF8378;
+}
+
+.header-social-icon:hover{
+  background-color: #ff8278 !important;
+  border-color: #ff8278 !important;
+  color: #ffffff !important;
 
 }

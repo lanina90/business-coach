@@ -7,7 +7,7 @@ import Reviews from "../../common/Reviews/Reviews.tsx";
 const Testimonials = () => {
   const imgRef = useParallaxAnimation();
   return (
-    <section className={styles.testimonials} ref={imgRef}>
+    <section className={styles.testimonials} ref={imgRef} id="reviews">
       <Container className={styles["testimonials-container"]}>
         <PressCarousel/>
         <Reviews/>

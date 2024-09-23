@@ -17,7 +17,7 @@ const About = () => {
   }, [])
 
   return (
-    <section className={styles["about"]} ref={imgRef}>
+    <section className={styles["about"]} ref={imgRef} id="about">
       <Container>
         <h2 className={styles["about-h2"]}>Hi! I am John</h2>
         <Gradient/>
