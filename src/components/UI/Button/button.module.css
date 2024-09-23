@@ -32,3 +32,21 @@
   background-color: #FF8278;
   transition: all .5s ease;
 }
+
+.button-secondary{
+  border-radius: 0;
+  background-color: #333;
+  border: 2px solid #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all .5s ease;
+  padding: 15px 20px;
+  color: white;
+}
+
+.button-secondary:hover, .button-secondary:active {
+  background-color: inherit;
+  color: #333;
+}

@@ -1,15 +1,5 @@
 
 
-:root {
-  --contrast: #222222;
-  --contrast-2: #575760;
-  --contrast-3: #b2b2be;
-  --base: #f0f0f0;
-  --base-2: #f7f8f9;
-  --base-3: #ffffff;
-  --accent: #1e73be;
-}
-
 * {
   margin: 0;
   padding: 0;

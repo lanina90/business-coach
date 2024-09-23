@@ -9,6 +9,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => 
     href,
     disabled = false,
     children,
+    btnClassName,
     ...rest
   } = props;
 
@@ -20,7 +21,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => 
       [styles[`button-href`]]: !!href,
       [styles[`button-${buttonStyle}`]]: buttonStyle && !disabled,
       [styles[`button-root-disabled`]]: disabled,
-    }
+
+    },
+    btnClassName
   );
 
   return (

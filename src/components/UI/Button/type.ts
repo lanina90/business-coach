@@ -6,4 +6,5 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   buttonStyle?: ButtonStyle;
   disabled?: boolean
   href?: string;
+  btnClassName?: string
 }

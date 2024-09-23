@@ -1,0 +1,14 @@
+
+
+.modal{
+  position: fixed;
+  width: 80vw;
+  height: max-content;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 60px;
+  border-radius: 20px;
+  max-width: 600px;
+}

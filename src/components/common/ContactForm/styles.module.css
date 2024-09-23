@@ -1,0 +1,39 @@
+
+.contact-form form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.contact-form h2{
+  text-transform: uppercase;
+  text-align: center;
+}
+.form-button {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 20px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.contact-form-close{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.form-success {
+text-align: center;
+}
+
+.form-success h2{
+  color: darkseagreen;
+}
+
+.form-success p{
+  font-size: 18px;
+}
