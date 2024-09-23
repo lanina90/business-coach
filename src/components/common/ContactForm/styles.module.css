@@ -1,15 +1,16 @@
 
-.contact-form form{
+.contact-form form {
   display: flex;
   flex-direction: column;
   gap: 20px;
   margin-top: 30px;
 }
 
-.contact-form h2{
+.contact-form h2 {
   text-transform: uppercase;
   text-align: center;
 }
+
 .form-button {
   width: 100%;
   margin-top: 10px;
@@ -19,7 +20,7 @@
   font-weight: 600;
 }
 
-.contact-form-close{
+.contact-form-close {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -27,13 +28,13 @@
 }
 
 .form-success {
-text-align: center;
+  text-align: center;
 }
 
-.form-success h2{
+.form-success h2 {
   color: darkseagreen;
 }
 
-.form-success p{
+.form-success p {
   font-size: 18px;
 }
