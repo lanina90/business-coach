@@ -11,9 +11,9 @@ import welbing from "../assets/press/welbing.png";
 import john from "../assets/reviews/john.jpg";
 import sarah from "../assets/reviews/sarah.jpg";
 import david from "../assets/reviews/david.jpg";
-import stepOneImg from "../assets/steps/step-1.jpg"
-import stepTwoImg from "../assets/steps/step-2.jpg"
-import stepThreeImg from "../assets/steps/step-3.jpg"
+import stepOneImg from "../assets/steps/step-1.webp"
+import stepTwoImg from "../assets/steps/step-2.webp"
+import stepThreeImg from "../assets/steps/step-3.webp"
 import stepOneIcon from "../assets/steps/icon-1.png"
 import stepTwoIcon from "../assets/steps/icon-2.png"
 import stepThreeIcon from "../assets/steps/icon-3.png"
