@@ -1,6 +1,4 @@
-
-
-.header{
+.header {
   width: 100%;
   position: fixed;
   inset: 0;
@@ -9,28 +7,26 @@
   z-index: 999;
 }
 
-
-.header-social{
-  color: #FF8278;
+.header-social {
+  color: #ff8278;
   display: flex;
   justify-content: flex-end;
   gap: 5px;
   cursor: pointer;
 }
 
-.header-social-icon{
+.header-social-icon {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid #FF8378;
+  border: 1px solid #ff8378;
 }
 
-.header-social-icon:hover{
+.header-social-icon:hover {
   background-color: #ff8278 !important;
   border-color: #ff8278 !important;
   color: #ffffff !important;
-
 }

@@ -1,39 +1,39 @@
-
-
 .button {
   cursor: pointer;
   border: 0;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   letter-spacing: 2px;
   text-transform: uppercase;
   font-size: 16px;
   border-radius: 0;
 }
 
-.button-gradient{
-  background-image: linear-gradient(to right, rgb(252, 173, 75, .7), rgb(255, 131, 120, .7));
+.button-gradient {
+  background-image: linear-gradient(to right, rgb(252, 173, 75, 0.7), rgb(255, 131, 120, 0.7));
   font-weight: 500;
   padding: 15px 20px;
 }
 
-.button-gradient:hover, .button-gradient:active{
-  background-image: linear-gradient(to right, #FF8378, #FDBF97, #FCAD4B);
-  transition: all .5s ease;
+.button-gradient:hover,
+.button-gradient:active {
+  background-image: linear-gradient(to right, #ff8378, #fdbf97, #fcad4b);
+  transition: all 0.5s ease;
 }
 
-.button-primary{
+.button-primary {
   background-color: transparent;
-  border-bottom: solid 2px #FF8278;
+  border-bottom: solid 2px #ff8278;
   font-weight: 600;
   padding: 10px;
 }
 
-.button-primary:hover, .button-primary:active {
-  background-color: #FF8278;
-  transition: all .5s ease;
+.button-primary:hover,
+.button-primary:active {
+  background-color: #ff8278;
+  transition: all 0.5s ease;
 }
 
-.button-secondary{
+.button-secondary {
   border-radius: 0;
   background-color: #333;
   border: 2px solid #333;
@@ -41,12 +41,13 @@
   letter-spacing: 2px;
   font-size: 16px;
   font-weight: 600;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   padding: 15px 20px;
   color: white;
 }
 
-.button-secondary:hover, .button-secondary:active {
+.button-secondary:hover,
+.button-secondary:active {
   background-color: inherit;
   color: #333;
 }

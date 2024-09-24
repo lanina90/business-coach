@@ -1,6 +1,4 @@
-
-
-.footer{
+.footer {
   position: relative;
   bottom: 0px;
   background-color: #1b1b1b;
@@ -12,7 +10,7 @@
   padding: 30px 0;
 }
 
-.footer-container{
+.footer-container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
@@ -29,17 +27,17 @@
   align-items: center;
 }
 
-.footer-subscribe h3{
+.footer-subscribe h3 {
   font-size: 24px;
   font-weight: 600 !important;
   letter-spacing: 2px;
-  color: #FF8278 !important;
+  color: #ff8278 !important;
   text-transform: uppercase;
   line-height: 1.4;
   text-align: center;
 }
 
-.footer-subscribe p{
+.footer-subscribe p {
   font-size: 18px;
   letter-spacing: 2px;
   line-height: 1.4;
@@ -47,7 +45,7 @@
   margin-bottom: 20px;
 }
 
-.copyrights{
+.copyrights {
   text-align: center;
   font-size: 10px;
   color: grey;
@@ -55,7 +53,7 @@
   padding: 20px 0;
 }
 
-.form{
+.form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -63,18 +61,17 @@
   gap: 20px;
 }
 
-.form-label{
-  color: white!important;
+.form-label {
+  color: white !important;
 }
 
 @media screen and (min-width: 1024px) {
   .footer-logo {
-    border-right: 1px solid #FF8278;
-    border-left: 1px solid #FF8278;
+    border-right: 1px solid #ff8278;
+    border-left: 1px solid #ff8278;
   }
 
-  .footer-container{
+  .footer-container {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
-
 }

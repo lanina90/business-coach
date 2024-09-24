@@ -1,25 +1,30 @@
-import React from 'react';
-import {IoCubeOutline, IoDiamondSharp} from "react-icons/io5";
-import {PiAsteriskDuotone} from "react-icons/pi";
-import {GrDocumentPerformance} from "react-icons/gr";
-import styles from "./benefits.module.css"
+import { IoCubeOutline, IoDiamondSharp } from 'react-icons/io5';
+import { PiAsteriskDuotone } from 'react-icons/pi';
+import { GrDocumentPerformance } from 'react-icons/gr';
+import styles from './benefits.module.css';
+import { IBenefit } from '../../../types/IBenefit.ts';
+import { FC } from 'react';
+import { IconType } from 'react-icons';
 
-const Icons = {
+interface IIcons {
+  [key: string]: IconType;
+}
+
+const Icons: IIcons = {
   diamonds: IoDiamondSharp,
   cube: IoCubeOutline,
   asterisk: PiAsteriskDuotone,
-  performance: GrDocumentPerformance
+  performance: GrDocumentPerformance,
 };
 
-
-const BenefitCard = ({title, desc, icon}) => {
+const BenefitCard: FC<IBenefit> = ({ title, desc, icon }) => {
   const IconComponent = Icons[icon];
 
   return (
-    <div className={styles["benefit-card"]}>
+    <div className={styles['benefit-card']}>
       <h3>{title}</h3>
-      <span className={styles["separator"]}>
-        <IconComponent size={32} color={"#FF8278D3"}/>
+      <span className={styles['separator']}>
+        <IconComponent size={32} color='#FF8278D3' />
       </span>
       <p>{desc}</p>
     </div>

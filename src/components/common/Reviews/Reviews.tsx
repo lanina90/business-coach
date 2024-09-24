@@ -1,11 +1,11 @@
-import React, { useRef, useState} from 'react';
-import {testimonials} from "../../../constants/constants.ts";
-import styles from "./reviews.module.css"
-import ReviewCard from "./components/ReviewCard.tsx";
-import {useGSAP} from "@gsap/react";
-import gsap from "gsap";
-import {Draggable} from "gsap/all";
-import {MdArrowForwardIos} from "react-icons/md";
+import React, { useRef, useState } from 'react';
+import { testimonials } from '../../../constants/constants.ts';
+import styles from './reviews.module.css';
+import ReviewCard from './components/ReviewCard.tsx';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { Draggable } from 'gsap/all';
+import { MdArrowForwardIos } from 'react-icons/md';
 
 gsap.registerPlugin(useGSAP, Draggable);
 
@@ -33,12 +33,11 @@ const Reviews = () => {
     gsap.to(dragTarget.current, {
       x: -newIndex * slideWidth,
       duration: slideDuration,
-      ease: "power2.inOut",
+      ease: 'power2.inOut',
     });
-  }
+  };
 
   useGSAP(() => {
-
     let startX = 0;
 
     const handleTouchStart = (e) => {
@@ -61,54 +60,49 @@ const Reviews = () => {
     const slider = sliderRef.current;
 
     if (slider) {
-      slider.addEventListener("touchstart", handleTouchStart);
-      slider.addEventListener("touchmove", handleTouchMove);
+      slider.addEventListener('touchstart', handleTouchStart);
+      slider.addEventListener('touchmove', handleTouchMove);
     }
 
     const btnNext = btnNextRef.current;
     const btnPrev = btnPrevRef.current;
 
-    btnNext.addEventListener("click", () => animateSlides(-1));
-    btnPrev.addEventListener("click", () => animateSlides(1));
+    btnNext.addEventListener('click', () => animateSlides(-1));
+    btnPrev.addEventListener('click', () => animateSlides(1));
 
     return () => {
       if (slider) {
-        slider.removeEventListener("touchstart", handleTouchStart);
-        slider.removeEventListener("touchmove", handleTouchMove);
+        slider.removeEventListener('touchstart', handleTouchStart);
+        slider.removeEventListener('touchmove', handleTouchMove);
       }
 
       if (btnNext && btnPrev) {
-        btnNext.removeEventListener("click", () => animateSlides(-1));
-        btnPrev.removeEventListener("click", () => animateSlides(1));
+        btnNext.removeEventListener('click', () => animateSlides(-1));
+        btnPrev.removeEventListener('click', () => animateSlides(1));
       }
     };
-
   }, [currentIndex, totalSlides, sliderRef]);
 
   return (
     <>
-      <div ref={sliderRef} className={styles["reviews"]}>
-        <div ref={proxyRef} className={styles["proxy-hidden"]}></div>
-        <div ref={dragTarget} draggable="true" className={styles["reviews-carousel"]}>
-          {testimonials.map(({id, img, name, testimonial, role}) => (
-            <ReviewCard key={id} {...{img, name, testimonial, role}} />
+      <div ref={sliderRef} className={styles['reviews']}>
+        <div ref={proxyRef} className={styles['proxy-hidden']} />
+        <div ref={dragTarget} draggable="true" className={styles['reviews-carousel']}>
+          {testimonials.map(({ id, img, name, testimonial, role }) => (
+            <ReviewCard key={id} {...{ img, name, testimonial, role }} />
           ))}
         </div>
       </div>
-      <div className={styles["review-btns"]}>
-        <button ref={btnNextRef} className={styles["review-btns-next"]}>
-          <MdArrowForwardIos size={32}
-                             color={"rgb(252, 173, 75, .7)"}/>
+      <div className={styles['review-btns']}>
+        <button ref={btnNextRef} className={styles['review-btns-next']}>
+          <MdArrowForwardIos size={32} color="rgb(252, 173, 75, .7)" />
         </button>
-        <button ref={btnPrevRef} className={styles["review-btns-prev"]}>
-          <MdArrowForwardIos size={32}
-                             color={"rgb(252, 173, 75, .7)"}/>
+        <button ref={btnPrevRef} className={styles['review-btns-prev']}>
+          <MdArrowForwardIos size={32} color="rgb(252, 173, 75, .7)" />
         </button>
       </div>
-
     </>
-  )
-    ;
+  );
 };
 
 export default Reviews;

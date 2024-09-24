@@ -1,10 +1,4 @@
-
-export type InputClassKey =
-  | "root"
-  | "label"
-  | "icon"
-  | "input"
-
+export type InputClassKey = 'root' | 'label' | 'icon' | 'input';
 
 export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string;
@@ -12,5 +6,5 @@ export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> 
   classes?: Partial<Record<InputClassKey, string>>;
   textarea?: boolean;
   datePicker?: boolean;
-  error?: string
+  error?: string;
 }

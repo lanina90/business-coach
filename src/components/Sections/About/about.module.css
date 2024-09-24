@@ -1,15 +1,11 @@
-
-
-.about{
+.about {
   height: 100%;
   position: relative;
   color: white;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-image:
-          linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
-          url(/src/assets/about-img.jpg);
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url(/src/assets/about-img.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -17,7 +13,7 @@
   padding: 100px 0;
 }
 
-.about-h2{
+.about-h2 {
   text-align: center;
   font-weight: 600;
   text-transform: uppercase;
@@ -25,7 +21,7 @@
   letter-spacing: 2px;
 }
 
-.about-content{
+.about-content {
   font-size: 17px;
   font-weight: normal;
   text-align: center;
@@ -38,8 +34,8 @@
   margin: 0.75em 0;
 }
 
-.about-content-gradient{
-  background: linear-gradient(to right, #FCAD4B, #FDBF97, #FF8278);
+.about-content-gradient {
+  background: linear-gradient(to right, #fcad4b, #fdbf97, #ff8278);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: 4px;
@@ -50,13 +46,12 @@
   font-size: 24px;
 }
 
-
 @media screen and (min-width: 1027px) {
-  .about-h2{
+  .about-h2 {
     font-size: 60px;
   }
 
-  .about-content-gradient span{
+  .about-content-gradient span {
     font-size: 30px;
   }
 }

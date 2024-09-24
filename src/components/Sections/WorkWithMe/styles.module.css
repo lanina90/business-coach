@@ -1,12 +1,10 @@
-
-
-.work{
+.work {
   height: 100vh;
   position: relative;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-image: url(/src/assets/traingular-shape-background.jpg);;
+  background-image: url(/src/assets/traingular-shape-background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -16,7 +14,7 @@
   text-align: center;
 }
 
-.work-title{
+.work-title {
   letter-spacing: 2px;
   font-weight: 600;
   text-transform: uppercase;
@@ -27,15 +25,12 @@
   font-size: 60px;
 }
 
-.work-text{
+.work-text {
   margin-top: 30px;
   font-weight: 400;
   text-transform: none;
   font-size: 17px;
 }
 
-
-
 @media screen and (min-width: 1027px) {
-
 }

@@ -1,7 +1,7 @@
 export interface IStep {
-  id: number,
-  title: string,
-  desc: string,
-  img: string,
-  icon: string
+  id: number;
+  title: string;
+  desc: string;
+  img: string;
+  icon: string;
 }

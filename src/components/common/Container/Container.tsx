@@ -1,6 +1,6 @@
-import styles from "./container.module.css"
+import styles from './container.module.css';
 import classNames from 'classnames';
-import {forwardRef, HTMLAttributes} from "react";
+import { forwardRef, HTMLAttributes } from 'react';
 
 interface ContainerProps extends HTMLAttributes<HTMLDivElement> {
   className?: string;

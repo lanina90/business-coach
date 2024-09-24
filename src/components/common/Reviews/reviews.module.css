@@ -1,6 +1,4 @@
-
-
-.reviews{
+.reviews {
   position: relative;
   overflow: hidden;
   display: flex;
@@ -29,7 +27,7 @@
   height: 0;
 }
 
-.review-card-img{
+.review-card-img {
   border-radius: 50%;
   width: 150px;
   height: 150px;
@@ -38,7 +36,7 @@
   background-size: cover;
 }
 
-.review-card-text{
+.review-card-text {
   padding: 0 25px 25px;
   text-align: center;
   font-style: italic;
@@ -46,17 +44,17 @@
   font-weight: 300;
 }
 
-.review-card-role{
+.review-card-role {
   font-weight: 600;
   font-size: 17px;
 }
 
-.review-card-gradient{
+.review-card-gradient {
   width: 30%;
   margin: 12px 0;
 }
 
-.review-btns{
+.review-btns {
   position: absolute;
   display: flex;
   bottom: 40px;
@@ -70,16 +68,14 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-
 }
 
-.review-btns-next{
+.review-btns-next {
   transform: rotate(180deg);
 }
 
-
 @media screen and (min-width: 1024px) {
-  .review-card{
+  .review-card {
     min-height: 50vh;
   }
 }

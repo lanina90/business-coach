@@ -1,4 +1,3 @@
-
 export { default as About } from './About/About.tsx';
 export { default as Benefits } from './Benefits/Benefits.tsx';
 export { default as CTA } from './CTA/CTA.tsx';
