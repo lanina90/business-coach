@@ -3,17 +3,21 @@ import gsap from 'gsap';
 
 gsap.registerPlugin(Draggable, ScrollTrigger);
 
-export const dragAndDropAnimation = (target, bounds, ...rest) => {
+interface Bounds {
+  minX: number;
+  maxX: number;
+}
+
+export const dragAndDropAnimation = (target: HTMLDivElement | null, bounds: Bounds) => {
   Draggable.create(target, {
     type: 'x',
-    bounds: bounds,
     throwProps: true,
+    bounds: bounds,
     dragClickables: true,
-    ...rest,
   });
 };
 
-export const elementAppearingEffect = (target) => {
+export const elementAppearingEffect = (target: HTMLElement | HTMLElement[]) => {
   const tl = gsap.timeline({
     delay: 0.5,
     repeat: 0,
@@ -25,7 +29,13 @@ export const elementAppearingEffect = (target) => {
     },
   });
 
-  const animatedElements = gsap.utils.toArray(target?.children);
+  let animatedElements;
+  if ('children' in target) {
+    animatedElements = gsap.utils.toArray(target?.children);
+  } else {
+    animatedElements = target
+  }
+
 
   tl.fromTo(
     animatedElements,

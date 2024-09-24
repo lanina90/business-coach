@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { testimonials } from '../../../constants/constants.ts';
 import styles from './reviews.module.css';
 import ReviewCard from './components/ReviewCard.tsx';
@@ -23,7 +23,7 @@ const Reviews = () => {
     return sliderRef.current ? sliderRef.current?.clientWidth : 0;
   };
 
-  const animateSlides = (direction) => {
+  const animateSlides = (direction: number) => {
     const slideWidth = getSlideWidth();
     if (!slideWidth) return;
 
@@ -40,11 +40,11 @@ const Reviews = () => {
   useGSAP(() => {
     let startX = 0;
 
-    const handleTouchStart = (e) => {
+    const handleTouchStart = (e: TouchEvent) => {
       startX = e.touches[0].clientX;
     };
 
-    const handleTouchMove = (e) => {
+    const handleTouchMove = (e: TouchEvent) => {
       const moveX = e.touches[0].clientX;
       const deltaX = moveX - startX;
 
@@ -67,8 +67,10 @@ const Reviews = () => {
     const btnNext = btnNextRef.current;
     const btnPrev = btnPrevRef.current;
 
-    btnNext.addEventListener('click', () => animateSlides(-1));
-    btnPrev.addEventListener('click', () => animateSlides(1));
+    if (btnNext && btnPrev) {
+      btnNext.addEventListener('click', () => animateSlides(-1));
+      btnPrev.addEventListener('click', () => animateSlides(1));
+    }
 
     return () => {
       if (slider) {
@@ -89,7 +91,7 @@ const Reviews = () => {
         <div ref={proxyRef} className={styles['proxy-hidden']} />
         <div ref={dragTarget} draggable="true" className={styles['reviews-carousel']}>
           {testimonials.map(({ id, img, name, testimonial, role }) => (
-            <ReviewCard key={id} {...{ img, name, testimonial, role }} />
+            <ReviewCard key={id} {...{ id,img, name, testimonial, role }} />
           ))}
         </div>
       </div>

@@ -3,7 +3,7 @@ import { ButtonProps } from './type.ts';
 import styles from './button.module.css';
 import classNames from 'classnames';
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
+const Button = React.forwardRef<ButtonProps>((props, ref) => {
   const { buttonStyle, href, disabled = false, children, btnClassName, ...rest } = props;
 
   const Component = href ? 'a' : 'button';

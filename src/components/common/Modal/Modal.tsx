@@ -1,7 +1,7 @@
-import React from 'react';
 import styles from './styles.module.css';
+import { ReactNode } from 'react';
 
-const Modal = ({ children }) => {
+const Modal = ({ children }:{ children: ReactNode }) => {
   return <div className={styles['modal']}>{children}</div>;
 };
 

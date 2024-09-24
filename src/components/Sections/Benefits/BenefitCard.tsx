@@ -17,11 +17,11 @@ const Icons: IIcons = {
   performance: GrDocumentPerformance,
 };
 
-const BenefitCard: FC<IBenefit> = ({ title, desc, icon }) => {
+const BenefitCard: FC<IBenefit> = ({ id,title, desc, icon }) => {
   const IconComponent = Icons[icon];
 
   return (
-    <div className={styles['benefit-card']}>
+    <div id={`benefit-card-${id}`} className={styles['benefit-card']}>
       <h3>{title}</h3>
       <span className={styles['separator']}>
         <IconComponent size={32} color='#FF8278D3' />

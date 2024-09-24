@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { pressData } from '../../../constants/constants.ts';
@@ -12,8 +12,11 @@ const PressCarousel = () => {
   const dragTarget = useRef<HTMLDivElement | null>(null);
 
   useGSAP(() => {
-    dragAndDropAnimation(dragTarget.current, sliderRef.current);
-  }, []);
+    if (dragTarget.current && sliderRef.current) {
+      const bounds = {minX:-(dragTarget.current?.clientWidth - sliderRef.current?.clientWidth), maxX: 0}
+      dragAndDropAnimation(dragTarget.current, bounds);
+    }
+  }, [dragTarget, sliderRef ]);
 
   return (
     <div ref={sliderRef} className={styles['press-carousel']}>

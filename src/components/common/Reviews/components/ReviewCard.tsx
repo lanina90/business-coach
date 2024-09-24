@@ -3,9 +3,9 @@ import { ITestimonial } from '../../../../types/ITestimonial.ts';
 import styles from '../reviews.module.css';
 import Gradient from '../../Gradient/Gradient.tsx';
 
-const ReviewCard: React.FC<ITestimonial> = ({ img, name, testimonial, role }) => {
+const ReviewCard: React.FC<ITestimonial> = ({ id,img, name, testimonial, role }) => {
   return (
-    <div className={styles['review-card']}>
+    <div className={styles['review-card']} id={`review-card-${id}`}>
       <div className={styles['review-card-img']} style={{ backgroundImage: `url(${img})` }} />
       <Gradient className={styles['review-card-gradient']} />
       <p className={styles['review-card-text']}>{testimonial}</p>
