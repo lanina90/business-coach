@@ -7,9 +7,10 @@ interface ButtonBaseProps {
   disabled?: boolean;
   btnClassName?: string;
   children: string | ReactNode;
-  href?: string
+  href?: string;
 }
 
-export type ButtonProps = (ButtonBaseProps & React.ButtonHTMLAttributes<HTMLButtonElement>)
+export type ButtonProps =
+  | (ButtonBaseProps & React.ButtonHTMLAttributes<HTMLButtonElement>)
   | (ButtonBaseProps & React.AnchorHTMLAttributes<HTMLAnchorElement>);
 

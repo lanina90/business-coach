@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { ForwardedRef } from 'react';
 import { ButtonProps } from './type.ts';
 import styles from './button.module.css';
 import classNames from 'classnames';
 
-const Button = React.forwardRef<ButtonProps>((props, ref) => {
+const Button = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>((props, ref: ForwardedRef<HTMLButtonElement | HTMLAnchorElement>) => {
   const { buttonStyle, href, disabled = false, children, btnClassName, ...rest } = props;
 
   const Component = href ? 'a' : 'button';
