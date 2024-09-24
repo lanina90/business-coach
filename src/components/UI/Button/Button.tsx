@@ -1,9 +1,9 @@
 import React from 'react';
-import { ButtonProps } from './type.ts';
+import { AnchorElementProps, ButtonElementProps } from './type.ts';
 import styles from './button.module.css';
 import classNames from 'classnames';
 
-const Button: React.FC<ButtonProps> = (props) => {
+const Button: React.FC<ButtonElementProps | AnchorElementProps> = (props) => {
   const { buttonStyle, href, disabled = false, children, btnClassName, ...rest } = props;
 
   const Component = href ? 'a' : 'button';
@@ -18,15 +18,18 @@ const Button: React.FC<ButtonProps> = (props) => {
     btnClassName
   );
 
+  if (href) {
+    return (
+      <a className={rootClassName} href={href} {...(rest as AnchorElementProps)}>
+        {children}
+      </a>
+    );
+  }
+
   return (
-    <Component
-      {...{
-        className: rootClassName,
-        ...rest,
-      }}
-    >
+    <button className={rootClassName} disabled={disabled} {...(rest as ButtonElementProps)}>
       {children}
-    </Component>
+    </button>
   );
 };
 
