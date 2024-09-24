@@ -21,7 +21,7 @@ const Button = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonPro
   return (
     <Component
       {...{
-        ref,
+        ref: ref as ForwardedRef<HTMLButtonElement & HTMLAnchorElement>,
         className: rootClassName,
         ...rest,
       }}

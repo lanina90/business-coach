@@ -13,7 +13,7 @@ const Benefits = () => {
   const animRef = useRef<HTMLDivElement | null>(null);
 
   useGSAP(() => {
-    elementAppearingEffect(animRef.current);
+    if (animRef && animRef.current) elementAppearingEffect(animRef.current as HTMLDivElement);
   }, [animRef]);
 
   return (
@@ -24,7 +24,7 @@ const Benefits = () => {
         </h2>
         <div className={styles['benefits-content']} ref={animRef}>
           {benefits.map(({ id, title, desc, icon }) => (
-            <BenefitCard key={id} {...{ title, desc, icon }} />
+            <BenefitCard key={id} {...{id, title, desc, icon }} />
           ))}
         </div>
         <Button href='#contact' buttonStyle="primary">
