@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import Button from '../../UI/Button/Button.tsx';
 import { useParallaxAnimation } from '../../../hooks/useParalaxAnimation.ts';
 import Gradient from '../../common/Gradient/Gradient.tsx';
+import traingularOverlay from "../../../assets/triangular-overlay-1.png"
 
 const Hero = () => {
   const imgRef = useParallaxAnimation();
@@ -24,7 +25,7 @@ const Hero = () => {
         </div>
       </Container>
       <div className={classNames('flex-row flex-between', styles['hero-bottom'])}>
-        <img src="/src/assets/triangular-overlay-1.png" alt="overlay" sizes="(max-width: 1282px) 100vw, 1282px" />
+        <img src={traingularOverlay} alt="overlay" sizes="(max-width: 1282px) 100vw, 1282px" />
         <div className={styles['hero-content-about']}>
           <p>
             <strong>John Doe</strong>

@@ -5,6 +5,7 @@ import { FaTwitter } from 'react-icons/fa6';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import { useGSAP } from '@gsap/react';
+import logo from '../../../assets/logo.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -29,7 +30,7 @@ const Header = () => {
       <Container>
         <div className="flex-row flex-between">
           <div className={styles['header-logo']}>
-            <img src="/src/assets/logo.png" alt="logo" width={150} height={100} />
+            <img src={logo} alt="logo" width={150} height={100} />
           </div>
           <div className={styles['header-social']}>
             {icons.map((item, index) => (

@@ -2,6 +2,7 @@ import styles from './footer.module.css';
 import Container from '../../common/Container/Container.tsx';
 import Input from '../../common/Input/Input.tsx';
 import Button from '../../UI/Button/Button.tsx';
+import logo from "../../../assets/logo.png"
 
 const Footer = () => {
   return (
@@ -24,7 +25,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className={styles['footer-logo']}>
-          <img src="/src/assets/logo.png" alt="" width={200} height={130} />
+          <img src={logo} alt="" width={200} height={130} />
         </div>
         <div className={styles['footer-subscribe']}>
           <h3>JOIN THE JUST DO IT MOVEMENT</h3>
