@@ -17,7 +17,7 @@ export const dragAndDropAnimation = (target: HTMLDivElement | null, bounds: Boun
   });
 };
 
-export const elementAppearingEffect = (target: HTMLElement | HTMLElement[]) => {
+export const elementAppearingEffect = (target: HTMLElement) => {
   const tl = gsap.timeline({
     delay: 0.5,
     repeat: 0,

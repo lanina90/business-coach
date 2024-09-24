@@ -22,7 +22,6 @@ const Button = React.forwardRef<ButtonProps>((props, ref) => {
     <Component
       {...{
         ref,
-        href,
         className: rootClassName,
         ...rest,
       }}
