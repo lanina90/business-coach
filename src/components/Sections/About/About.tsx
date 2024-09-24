@@ -12,8 +12,8 @@ const About = () => {
   const textRef = useRef<HTMLDivElement | null>(null);
 
   useGSAP(() => {
-    elementAppearingEffect(textRef.current);
-  }, []);
+    if(textRef && textRef.current) elementAppearingEffect(textRef.current as HTMLDivElement);
+  }, [textRef]);
 
   return (
     <section className={styles['about']} ref={imgRef} id="about">

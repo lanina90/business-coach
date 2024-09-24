@@ -13,7 +13,7 @@ const CTA = () => {
   const sectionRef = useRef<HTMLDivElement | null>(null);
 
   useGSAP(() => {
-    elementAppearingEffect(sectionRef.current);
+    if (sectionRef && sectionRef.current) elementAppearingEffect(sectionRef.current as HTMLDivElement);
   }, []);
 
   return (

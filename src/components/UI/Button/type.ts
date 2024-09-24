@@ -10,7 +10,6 @@ interface ButtonBaseProps {
   href?: string
 }
 
-export type ButtonProps =
-  | (ButtonBaseProps & React.ButtonHTMLAttributes<HTMLButtonElement>)
+export type ButtonProps = (ButtonBaseProps & React.ButtonHTMLAttributes<HTMLButtonElement>)
   | (ButtonBaseProps & React.AnchorHTMLAttributes<HTMLAnchorElement>);
 
