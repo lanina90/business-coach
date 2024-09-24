@@ -9,7 +9,7 @@ gsap.registerPlugin(useGSAP);
 
 const PressCarousel = () => {
   const sliderRef = useRef<HTMLDivElement | null>(null);
-  const dragTarget = useRef<any>(null);
+  const dragTarget = useRef<HTMLDivElement | null>(null);
 
   useGSAP(() => {
     dragAndDropAnimation(dragTarget.current, sliderRef.current )

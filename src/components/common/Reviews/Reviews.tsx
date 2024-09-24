@@ -13,8 +13,8 @@ const Reviews = () => {
   const sliderRef = useRef<HTMLDivElement | null>(null);
   const dragTarget = useRef<HTMLDivElement | null>(null);
   const proxyRef = useRef<HTMLDivElement | null>(null);
-  const btnNextRef = useRef<any>(null);
-  const btnPrevRef = useRef<any>(null);
+  const btnNextRef = useRef<HTMLButtonElement | null>(null);
+  const btnPrevRef = useRef<HTMLButtonElement | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const slideDuration = 1.5;
   const totalSlides = testimonials.length;
