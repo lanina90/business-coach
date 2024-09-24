@@ -7,6 +7,7 @@ import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import { elementAppearingEffect } from '../../../utils/animations/animations.ts';
 import Button from '../../UI/Button/Button.tsx';
+import layer from "../../../assets/testimonials-layer.jpg"
 
 const Benefits = () => {
   const imgRef = useParallaxAnimation();
@@ -17,7 +18,7 @@ const Benefits = () => {
   }, [animRef]);
 
   return (
-    <section className={styles['benefits']} ref={imgRef}>
+    <section className={styles['benefits']} ref={imgRef} style={{backgroundImage: `url(${layer})`}}>
       <Container className={styles['benefits-container']}>
         <h2>
           What happens when we <br /> <span>Just DO IT?</span>
