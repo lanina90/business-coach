@@ -19,8 +19,7 @@ const Hero = () => {
         </h2>
         <Gradient className={styles['hero-gradient']} />
         <div className={styles['hero-buttons']}>
-          <Button buttonStyle="gradient">Watch My Video</Button>
-          <Button href='#contact' buttonStyle="primary">
+          <Button href='#contact' buttonStyle="gradient">
             Partner with me
           </Button>
         </div>
