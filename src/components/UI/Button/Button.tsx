@@ -6,8 +6,6 @@ import classNames from 'classnames';
 const Button: React.FC<ButtonElementProps | AnchorElementProps> = (props) => {
   const { buttonStyle, href, disabled = false, children, btnClassName, ...rest } = props;
 
-  const Component = href ? 'a' : 'button';
-
   const rootClassName = classNames(
     {
       [styles[`button`]]: true,
