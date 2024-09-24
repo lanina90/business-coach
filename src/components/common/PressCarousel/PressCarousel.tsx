@@ -13,7 +13,7 @@ const PressCarousel = () => {
 
   useGSAP(() => {
     if (dragTarget.current && sliderRef.current) {
-      const bounds = {minX:(dragTarget.current?.clientWidth - sliderRef.current?.clientWidth) * -1, maxX: 0}
+      const bounds = {minX:(dragTarget.current?.clientWidth - sliderRef.current?.clientWidth * -1) , maxX: 0}
       dragAndDropAnimation(dragTarget.current, bounds);
     }
   }, [dragTarget, sliderRef ]);

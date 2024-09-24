@@ -5,12 +5,13 @@ import Button from '../../UI/Button/Button.tsx';
 import { useParallaxAnimation } from '../../../hooks/useParalaxAnimation.ts';
 import Gradient from '../../common/Gradient/Gradient.tsx';
 import traingularOverlay from "../../../assets/triangular-overlay-1.png"
+import hero from "../../../assets/john-doe.webp"
 
 const Hero = () => {
   const imgRef = useParallaxAnimation();
 
   return (
-    <section className={styles.hero} ref={imgRef}>
+    <section className={styles.hero} ref={imgRef} style={{backgroundImage: `url(${hero})`}}>
       <Container className={styles['hero-content']}>
         <h1 className={styles['hero-content-title']}>John Doe - Lorem ipsum dolor sit amet </h1>
         <h2 className={styles['hero-content-subtitle']}>
@@ -25,7 +26,8 @@ const Hero = () => {
         </div>
       </Container>
       <div className={classNames('flex-row flex-between', styles['hero-bottom'])}>
-        <img src={traingularOverlay} alt="overlay" sizes="(max-width: 1282px) 100vw, 1282px" />
+        <div className={styles['overlay']} style={{ backgroundImage: `url(${traingularOverlay})`}}/>
+        {/*<img loading="lazy" src={traingularOverlay} alt="overlay" sizes="(max-width: 1440px) 100vw, 1000px" />*/}
         <div className={styles['hero-content-about']}>
           <p>
             <strong>John Doe</strong>

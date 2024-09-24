@@ -5,11 +5,19 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-image: url(/src/assets/john-doe.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   width: 100%;
+}
+
+.overlay {
+  width: 60%;
+  height: 50vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+
 }
 
 .hero:after {
