@@ -1,9 +1,9 @@
-import React, { ForwardedRef } from 'react';
+import React from 'react';
 import { ButtonProps } from './type.ts';
 import styles from './button.module.css';
 import classNames from 'classnames';
 
-const Button = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>((props, ref: ForwardedRef<HTMLButtonElement | HTMLAnchorElement>) => {
+const Button: React.FC<ButtonProps> = (props) => {
   const { buttonStyle, href, disabled = false, children, btnClassName, ...rest } = props;
 
   const Component = href ? 'a' : 'button';
@@ -21,7 +21,6 @@ const Button = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonPro
   return (
     <Component
       {...{
-        ref: ref as ForwardedRef<HTMLButtonElement & HTMLAnchorElement>,
         className: rootClassName,
         ...rest,
       }}
@@ -29,6 +28,6 @@ const Button = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonPro
       {children}
     </Component>
   );
-});
+};
 
 export default Button;
